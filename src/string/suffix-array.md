@@ -10,20 +10,20 @@ A **suffix array** will contain integers that represent the **starting indexes**
 As an example look at the string $s = abaab$.
 All suffixes are as follows
 $$\begin{array}{ll}
-0. & abaab \\\\
-1. & baab \\\\
-2. & aab \\\\
-3. & ab \\\\
-4. & b
+0. \& abaab \\\\
+1. \& baab \\\\
+2. \& aab \\\\
+3. \& ab \\\\
+4. \& b
 \end{array}$$
 
 After sorting these strings:
 $$\begin{array}{ll}
-2. & aab \\\\
-3. & ab \\\\
-0. & abaab \\\\
-4. & b \\\\
-1. & baab
+2. \& aab \\\\
+3. \& ab \\\\
+0. \& abaab \\\\
+4. \& b \\\\
+1. \& baab
 \end{array}$$
 
 Therefore the suffix array for $s$ will be $(2,~ 3,~ 0,~ 4,~ 1)$.

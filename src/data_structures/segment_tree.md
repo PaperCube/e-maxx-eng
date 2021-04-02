@@ -334,7 +334,7 @@ In this problem we want to find the number of zeros in a given range, and additi
 
 Again we have to change the store values of the tree a bit:
 This time we will store the number of zeros in each segment in $t[]$. 
-It is pretty clear, how to implement the $\text{build}$, $\text{update}$ and $\text{count_zero}$ functions, we can simply use the ideas from the sum query problem.
+It is pretty clear, how to implement the $\text{build}$, $\text{update}$ and $\verb|count_zero|$ functions, we can simply use the ideas from the sum query problem.
 Thus we solved the first part of the problem.
 
 Now we learn how to solve the problem of finding the $k$-th zero in the array $a[]$. 
@@ -449,7 +449,7 @@ data combine(data l, data r) {
 
 Using the $\text{combine}$ function it is easy to build the Segment Tree. 
 We can implement it in exactly the same way as in the previous implementations.
-To initialize the leaf vertices, we additionally create the auxiliary function $\text{make_data}$, which will return a $\text{data}$ object holding the information of a single value.
+To initialize the leaf vertices, we additionally create the auxiliary function $\verb|make_data|$, which will return a $\text{data}$ object holding the information of a single value.
 
 ```cpp segment_tree_maximal_sum_subsegments2
 data make_data(int val) {
@@ -595,7 +595,7 @@ Since the array can contain a number repeated, the optimal choice is the data st
 The construction of such a Segment Tree is done in pretty much the same way as in the previous problem, only now we need to combine $\text{multiset}$s and not sorted lists.
 This leads to a construction time of $O(n \log^2 n)$ (in general merging two red-black trees can be done in linear time, but the C++ STL doesn't guarantee this time complexity).
 
-The $\text{query}$ function is also almost equivalent, only now the $\text{lower_bound}$ function of the $\text{multiset}$ function should be called instead ($\text{std::lower_bound}$ only works in $O(\log n)$ time if used with random-access iterators).
+The $\text{query}$ function is also almost equivalent, only now the $\verb|lower_bound|$ function of the $\text{multiset}$ function should be called instead ($\verb|std::lower_bound|$ only works in $O(\log n)$ time if used with random-access iterators).
 
 Finally the modification request. 
 To process it, we must go down the tree, and modify all $\text{multiset}$ from the corresponding segments that contain the effected element.
@@ -1068,9 +1068,9 @@ Instead of only performing these queries over a prefix of $a$, we want to use an
 Here we need a Segment Tree that represents the histogram of the elements in the range $a[l \dots r]$. 
 It is easy to see that such a Segment Tree is just the difference between the Segment Tree rooted at $root_{r}$ and the Segment Tree rooted at $root_{l-1}$, i.e. every vertex in the $[l \dots r]$ Segment Tree can be computed with the vertex of the $root_{r}$ tree minus the vertex of the $root_{l-1}$ tree.
 
-In the implementation of the $\text{find_kth}$ function this can be handled by passing two vertex pointer and computing the count/sum of the current segment as difference of the two counts/sums of the vertices.
+In the implementation of the $\verb|find_kth|$ function this can be handled by passing two vertex pointer and computing the count/sum of the current segment as difference of the two counts/sums of the vertices.
 
-Here are the modified $\text{build}$, $\text{update}$  and $\text{find_kth}$ functions
+Here are the modified $\text{build}$, $\text{update}$  and $\verb|find_kth|$ functions
 
 ```cpp kth_smallest_persistent_segment_tree
 Vertex* build(int tl, int tr) {

@@ -1,16 +1,11 @@
-e-maxx-eng
+E-maxx pdf-ize
 ==========
 
-[![Contributors](https://img.shields.io/github/contributors/e-maxx-eng/e-maxx-eng.svg)](https://github.com/e-maxx-eng/e-maxx-eng/graphs/contributors)
-[![Pull Requests](https://img.shields.io/github/issues-pr/e-maxx-eng/e-maxx-eng.svg)](https://github.com/e-maxx-eng/e-maxx-eng/pulls)
-[![Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/e-maxx-eng/e-maxx-eng.svg)](https://github.com/e-maxx-eng/e-maxx-eng/pulls?q=is%3Apr+is%3Aclosed)
-[![Build](https://github.com/e-maxx-eng/e-maxx-eng/workflows/test/badge.svg)](https://github.com/e-maxx-eng/e-maxx-eng/actions?query=branch%3Amaster+workflow%3Atest)
-[![Translation Progress](https://img.shields.io/badge/translation_progress-85.2%25-yellowgreen.svg)](https://github.com/e-maxx-eng/e-maxx-eng/wiki/Translation-Progress)
+This is an experimental project that aims at generating a pdf version of https://cp-algorithms.com with `pandoc`. This **PDF generator** project may or may not be maintained in the future and is only for experimental purpose.
 
-Translation of http://e-maxx.ru into English
+The generator script is placed under `./pdf_gen_script_generator` and generates a batch file for Windows in `out-sequence` generator. It can be very easily modified for Linux. The script requires:
 
-Compiled pages are published at https://cp-algorithms.com/
+* Python (only tested on 3.8, other versions should work)
+* Pandoc (only tested on 2.13)
+* LaTeX (only tested on `pdfTeX 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX)`)
 
-Manual for contributors: https://cp-algorithms.com/contrib.html
-
-Test-your-page form: https://cp-algorithms.com/test.php
