@@ -57,10 +57,10 @@ Total we got eight solutions instead four. However, it is easy to understand whe
 
 The last thing that we have not yet considered is **how to shift the straight lines** in the case when the first circle was not originally located at the origin. However, everything is simple here: it follows from the linearity of the equation of a straight line that the value $a \cdot x_0 + b \cdot y_0$ (where $x_0$ and $y_0$ are the coordinates of the original center of the first circle) must be subtracted from the coefficient $c$.
 
-##Implementation
+## Implementation
 We first describe all the necessary data structures and other auxiliary definitions:
 
-```point-line-circle-struct
+```cpp
 struct pt {
     double x, y;
 
@@ -86,7 +86,7 @@ double sqr (double a) {
 ```
 Then the solution itself can be written this way (where the main function for the call is the second; and the first function is an auxiliary):
 
-```find-tangents-to-two-circles
+```cpp
 void tangents (pt c, double r1, double r2, vector<line> & ans) {
     double r = r2 - r1;
     double z = sqr(c.x) + sqr(c.y);

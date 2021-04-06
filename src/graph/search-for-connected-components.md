@@ -14,7 +14,7 @@ Given an undirected graph $G$ with $n$ nodes and $m$ edges. We are required to f
 
 ## Implementation
 
-``` cpp
+```cpp
 int n;
 vector<int> g[MAXN] ;
 bool used[MAXN] ;

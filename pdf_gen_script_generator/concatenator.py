@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
     utf_encoding = {'encoding': 'utf-8'}
 
-    args = '-V geometry:margin=1in'
+    args = '-s --toc --toc-depth=1 -V geometry:margin=0.8in'
     script = open(path.join(out, 'script.bat'), 'w')
 
     main()
